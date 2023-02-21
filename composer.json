@@ -1,13 +1,8 @@
 {
     "name": "susheelbhai/multi_auth",
-    "description": "initial package for multiauthentication system",
-    "license": "MIT",
+    "description": "initial package",
     "type": "library",
-    "minimum-stability":"dev",
-    "version":"1.0.0",
-    "require": {
-        "laravel/breeze": "^1.19"
-    },
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Susheelbhai\\MultiAuth\\": "src/"
@@ -18,5 +13,9 @@
             "name": "Susheel Kumar Singh",
             "email": "susheelkrsingh306@gmail.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "laravel/breeze": "^1.19"
+    }
 }
