@@ -1,0 +1,18 @@
+{
+    "name": "susheelbhai/multi_auth",
+    "description": "initial package for multiauthentication system",
+    "require": {
+        "laravel/breeze": "^1.19"
+    },
+    "autoload": {
+        "psr-4": {
+            "Susheelbhai\\MultiAuth\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Susheel Kumar Singh",
+            "email": "susheelkrsingh306@gmail.com"
+        }
+    ]
+}
