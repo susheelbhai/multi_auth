@@ -22,7 +22,7 @@ Register the service Provider in  `config/app.php`
 Publish all the required files using the following command 
 
   ```
-      php artisan vendor:publish --tag="multi_auth"
+      php artisan vendor:publish --tag="multi_auth" --force 
   ```  
 
 ### Register Middleware
