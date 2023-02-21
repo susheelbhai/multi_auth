@@ -14,7 +14,7 @@
             "email": "susheelkrsingh306@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "laravel/breeze": "^1.19"
     }
