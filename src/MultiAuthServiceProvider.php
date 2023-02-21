@@ -30,10 +30,11 @@ class MultiAuthServiceProvider extends ServiceProvider
             __dir__ . "/View" => app_path('View'),
             __dir__ . "/Mail" => app_path('Mail'),
             __dir__ . "/Http/Middleware" => app_path('Http/Middleware'),
+            __dir__ . "/Http/Kernel.php" => app_path('Http/Kernel.php'),
             __dir__ . "/../database/factories" => database_path('factories'),
             __dir__ . "/../database/migrations" => database_path('migrations'),
             __dir__ . "/../database/seeders" => database_path('seeders'),
-            __dir__ . "/../config/multi_auth.php" => config_path('multi_auth.php'),
+            __dir__ . "/../config" => config_path('/'),
             __DIR__.'/../resources/views' => base_path('resources/views'),
             __dir__ . "/../assets" => public_path('storage/theme/admin_theme1')
         ], 'multi_auth');
