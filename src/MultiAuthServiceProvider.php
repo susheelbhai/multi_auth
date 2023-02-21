@@ -26,11 +26,7 @@ class MultiAuthServiceProvider extends ServiceProvider
     public function registerPublishable()
     {
         $this->publishes([
-            __dir__ . "/Http/Controllers" => app_path('Http/Controllers'),
-            __dir__ . "/View" => app_path('View'),
-            __dir__ . "/Mail" => app_path('Mail'),
-            __dir__ . "/Http/Middleware" => app_path('Http/Middleware'),
-            __dir__ . "/Http/Kernel.php" => app_path('Http/Kernel.php'),
+            __dir__ . "/" => app_path('/'),
             __dir__ . "/../database/factories" => database_path('factories'),
             __dir__ . "/../database/migrations" => database_path('migrations'),
             __dir__ . "/../database/seeders" => database_path('seeders'),
