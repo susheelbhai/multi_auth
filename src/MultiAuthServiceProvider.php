@@ -1,6 +1,6 @@
 <?php
 
-namespace MultiAuth;
+namespace Susheelbhai\MultiAuth;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -11,8 +11,8 @@ class MultiAuthServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'multi_auth');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'multi_auth');
     }
 
     /**

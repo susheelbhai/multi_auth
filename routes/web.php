@@ -1,6 +1,5 @@
 <?php
 
-use MultiAuth\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\Route;
-
-Route::get('users/{id}', [HomeController::class, 'index']);
+include __DIR__.'/user/web.php';
+include __DIR__.'/partner/web.php';
+include __DIR__.'/admin/web.php';
