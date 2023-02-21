@@ -14,7 +14,7 @@ Require this package in your composer.json and update composer. This will downlo
 Register the service Provider in  `config/app.php`
 
   ```
-  MultiAuth\MultiAuthServiceProvider::class,
+  Susheelbhai\MultiAuth\MultiAuthServiceProvider::class,
   ```
   
 ### Vendor Publish
