@@ -1,6 +1,7 @@
 {
     "name": "susheelbhai/multi_auth",
     "description": "initial package for multiauthentication system",
+    "minimum-stability":"dev",
     "require": {
         "laravel/breeze": "^1.19"
     },
