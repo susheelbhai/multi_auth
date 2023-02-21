@@ -1,6 +1,8 @@
 {
     "name": "susheelbhai/multi_auth",
     "description": "initial package for multiauthentication system",
+    "license": "MIT",
+    "type": "library",
     "minimum-stability":"dev",
     "version":"1.0.0",
     "require": {
