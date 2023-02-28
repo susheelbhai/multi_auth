@@ -1,13 +1,13 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Admin;
 
 use App\Models\Setting;
 use Illuminate\View\View;
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\Config;
 
-class AdminGuestLayout extends Component
+class GuestLayout extends Component
 {
     public $settings;
     public function __construct()

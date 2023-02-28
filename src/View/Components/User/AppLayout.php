@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\User;
 
 use App\Models\Setting;
 use Illuminate\View\View;
 use Illuminate\View\Component;
 
-class PartnerLayout extends Component
+class AppLayout extends Component
 {
     public $settings;
     public function __construct()
@@ -17,6 +17,6 @@ class PartnerLayout extends Component
 
     public function render(): View
     {
-        return view('partner.layouts.'.$this->settings->partner_theme.'.app');
+        return view('user.layouts.'.$this->settings->user_theme.'.app');
     }
 }
