@@ -17,6 +17,6 @@ class AppLayout extends Component
 
     public function render(): View
     {
-        return view('user.layouts.'.$this->settings->user_theme.'.app');
+        return view('components.'.$this->settings->user_theme.'.layouts.app');
     }
 }
