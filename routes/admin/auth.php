@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\Auth\PasswordController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware('guest_admin')->prefix('admin')->name('admin.')->group(function () {
+Route::middleware('guest_admin', 'web')->prefix('admin')->name('admin.')->group(function () {
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');

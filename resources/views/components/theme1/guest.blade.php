@@ -1,27 +1,59 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<!doctype html>
+<html lang="en">
+
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+        
+        <meta charset="utf-8" />
+        <title>Login | Upcube - Admin & Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="stylesheet" href="{{ url('storage/css/common.css') }}">
+        @include('components.'.$settings->admin_theme.'.head_tag')
+        @if (isset($head_tag))
+            {{ $head_tag }}
+        @endif
 
     </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/">
-                    <img src="{{ asset('storage/common/images/logo/' . $settings->dark_logo) }}" alt="" width="200">
-                </a>
-            </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
+    <body class="auth-body-bg">
+        <div class="bg-overlay"></div>
+        <div class="wrapper-page">
+            <div class="container-fluid p-0">
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="text-center mt-4">
+                            <div class="mb-3">
+                                <a href="index.html" class="auth-logo">
+                                    <img src="assets/images/logo-dark.png" height="30" class="logo-dark mx-auto" alt="">
+                                    <img src="assets/images/logo-light.png" height="30" class="logo-light mx-auto" alt="">
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h4 class="text-muted text-center font-size-18"><b>Sign In</b></h4>
+    
+                        <div class="p-3">
+                            {{$slot}}
+                        </div>
+                        <!-- end -->
+                    </div>
+                    <!-- end cardbody -->
+                </div>
+                <!-- end card -->
             </div>
+            <!-- end container -->
         </div>
+        <!-- end -->
+
+        <!-- JAVASCRIPT -->
+        
+        @include('components.'.$settings->admin_theme.'.js')
+    <script src="{{ url('storage/js/common.js') }}">  </script>
     </body>
 </html>
+

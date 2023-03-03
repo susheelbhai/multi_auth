@@ -1,27 +1,42 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<!doctype html>
+<html lang="en">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+  <link rel="stylesheet" href="{{ url('storage/css/common.css') }}">
+    @include('components.'.$settings->admin_theme.'.head_tag')
+    @if (isset($head_tag))
+        {{ $head_tag }}
+    @endif
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+    
+</head>
 
-    </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/">
-                    {{-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> --}}
-                </a>
-            </div>
+<body data-topbar="dark">
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+    <div id="layout-wrapper">
+
+
+        @include('admin.layouts.'.$settings->admin_theme.'.header')
+        
+
+        <div class="main-content">
+            <div class="page-content">
                 {{ $slot }}
             </div>
+            @include('admin.layouts.'.$settings->admin_theme.'.footer')
+
         </div>
-    </body>
+
+    </div>
+
+    <div class="rightbar-overlay"></div>
+    @include('components.'.$settings->admin_theme.'.js')
+
+
+    <script src="{{ url('storage/js/common.js') }}">  </script>
+
+
+
+</body>
+
 </html>

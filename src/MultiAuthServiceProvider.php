@@ -11,7 +11,7 @@ class MultiAuthServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+        // $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'multi_auth');
     }
 
@@ -29,6 +29,7 @@ class MultiAuthServiceProvider extends ServiceProvider
             __dir__ . "/" => app_path('/'),
             __dir__ . "/../database" => database_path('/'),
             __dir__ . "/../config" => config_path('/'),
+            __dir__ . "/../routes" => base_path('/routes'),
             __DIR__.'/../resources/views' => base_path('resources/views'),
         ], 'multi_auth');
         $this->publishes([

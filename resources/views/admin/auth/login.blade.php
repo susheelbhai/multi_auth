@@ -1,45 +1,51 @@
-<x-admin-guest-layout>
+<x-admin.guest-layout>
 
-    <form method="POST" action="{{ route('admin.login') }}">
+    <form class="form-horizontal mt-3" method="POST" action="{{ route('admin.login') }}">
         @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="login" :value="__('Email')" />
-            <x-text-input id="login" class="block mt-1 w-full" type="email" name="login" :value="old('login')" required
-                autofocus />
+        @php
+        if (!Auth::guard('admin')->check()) {
+            // return Auth::guard('admin')->user();
+            echo Auth::guard('admin')->user();
+        }
+        @endphp
+    
+        <div class="form-group mb-3 row">
+            <div class="col-12">
+                <input name="login" class="form-control" type="text" required="" placeholder="Username">
+            <x-input-error :messages="$errors->get('login')" class="mt-2" />
+            </div>
         </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                autocomplete="current-password" />
-
+        <div class="form-group mb-3 row">
+            <div class="col-12">
+                <input  name="password" class="form-control" type="password" required="" placeholder="Password">
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            </div>
         </div>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox"
-                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
+        <div class="form-group mb-3 row">
+            <div class="col-12">
+                <div class="custom-control custom-checkbox">
+                    <input name="remember" type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="form-label ms-1" for="customCheck1">Remember me</label>
+                </div>
+            </div>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="form-group mb-3 text-center row mt-3 pt-1">
+            <div class="col-12">
+                <button class="btn btn-info w-100 waves-effect waves-light" type="submit">Log In</button>
+            </div>
+        </div>
+
+        <div class="form-group mb-0 row mt-2">
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    href="{{ route('admin.password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
+            <div class="col-sm-7 mt-3">
+                <a href="{{ route('admin.password.request') }}" class="text-muted"><i class="mdi mdi-lock"></i> Forgot your password?</a>
+            </div>
             @endif
-
-            <x-primary-button class="ml-3">
-                {{ __('Log in') }}
-            </x-primary-button>
         </div>
     </form>
 
-</x-admin-guest-layout>
+
+</x-admin.guest-layout>

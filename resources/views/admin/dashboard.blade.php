@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-admin.app-layout>
     
     <div class="container-fluid">
         <x-admin.dashboard.heading1 heading="Dashboard" />

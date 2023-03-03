@@ -115,13 +115,13 @@ return [
         ],
         'partners' => [
             'provider' => 'partners',
-            'table' => 'password_resets',
+            'table' => 'password_reset_partners',
             'expire' => 600,
             'throttle' => 600,
         ],
         'admins' => [
             'provider' => 'admins',
-            'table' => 'password_resets',
+            'table' => 'password_reset_admins',
             'expire' => 60,
             'throttle' => 60,
         ],
