@@ -8,7 +8,7 @@
     <meta name="description" content="Saasbox - Multipurpose HTML Template for Saas &amp; Agency">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Title-->
-    <title>Saasbox - Multipurpose HTML Template for Saas &amp; Agency</title>
+    <title> {{ Config::get('settings', 'default')->app_name; }} Authentication </title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/core-img/favicon.ico" type="image/x-icon">
     <!-- All CSS Stylesheet-->
@@ -25,7 +25,7 @@
     <header class="header-area">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <!-- Navbar Brand --><a class="navbar-brand" href="index.html"><img src="img/core-img/logo-white.png" alt=""></a>
+          <!-- Navbar Brand --><a class="navbar-brand" href="index.html"><img src="{{ asset('storage/themes/theme2') }}/img/core-img/logo-white.png" alt=""></a>
           <!-- Navbar Toggler -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#saasboxNav" aria-controls="saasboxNav" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-grid"></i></button>
           <!-- Navbar Nav -->
@@ -131,7 +131,7 @@
         <div class="row g-4 g-lg-5 align-items-center justify-content-between">
           <!-- Thumbnail -->
           <div class="col-12 col-lg-6">
-            <div class="register-thumbnail"><img src="img/illustrator/hero-3.png" alt=""></div>
+            <div class="register-thumbnail"><img src="{{ asset('storage/themes/theme2') }}/img/illustrator/hero-3.png" alt=""></div>
           </div>
           <div class="col-12 col-lg-6">
             <div class="card register-card bg-gray p-2 p-sm-4">
@@ -176,7 +176,7 @@
         <div class="row g-4 g-lg-5">
           <!-- Footer Widget Area -->
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="footer-widget-area"><a class="d-block mb-4" href="index.html"><img src="img/core-img/logo-white.png" alt=""></a>
+            <div class="footer-widget-area"><a class="d-block mb-4" href="index.html"><img src="{{ asset('storage/themes/theme2') }}/img/core-img/logo-white.png" alt=""></a>
               <p>It's crafted with the latest trend of design &amp; coded with all modern approaches.</p>
               <!-- Newsletter Form -->
               <div class="newsletter-form mb-4">
@@ -250,8 +250,8 @@
     <!-- Scroll To Top -->
     <div id="scrollTopButton"><i class="bi bi-arrow-up-short"></i></div>
     <!-- All JavaScript Files-->
-    <script src="{{ asset('storage/themes/theme2') }}js/all-js-libraries.js"></script>
-    <script src="{{ asset('storage/themes/theme2') }}js/active.js"></script>
+    <script src="{{ asset('storage/themes/theme2') }}/js/all-js-libraries.js"></script>
+    <script src="{{ asset('storage/themes/theme2') }}/js/active.js"></script>
   </body>
 
 <!-- Mirrored from preview.designing-world.com/saasbox-v2.0.0/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 28 Feb 2023 09:13:36 GMT -->

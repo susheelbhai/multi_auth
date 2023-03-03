@@ -3,7 +3,7 @@
 ## Installation
 
 ### Laravel
-Require this package in your composer.json and update composer. This will download the package and the dompdf + fontlib libraries also.
+Require this package in your composer.json and update composer. This will download the package and install breeze package.
 
     composer require susheelbhai/multi_auth
 
@@ -22,7 +22,13 @@ Register the service Provider in  `config/app.php`
 Publish all the required files using the following command 
 
   ```
-      php artisan vendor:publish --tag="multi_auth" --force 
+  php artisan vendor:publish --tag="multi_auth" --force 
+  ```  
+
+Publish all the themes using the following command 
+
+  ```
+  php artisan vendor:publish --tag="multi_auth_themes" --force 
   ```  
 
 ### Migrate database
@@ -30,8 +36,8 @@ Publish all the required files using the following command
 Migrate  databse tables and seed with the following commands
 
   ```
-        php artisan migrate
-        php artisan db:seed
+  php artisan migrate
+  php artisan db:seed
   ```
 
 ### License

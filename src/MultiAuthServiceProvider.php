@@ -30,7 +30,9 @@ class MultiAuthServiceProvider extends ServiceProvider
             __dir__ . "/../database" => database_path('/'),
             __dir__ . "/../config" => config_path('/'),
             __DIR__.'/../resources/views' => base_path('resources/views'),
-            __dir__ . "/../assets" => public_path('storage/themes')
         ], 'multi_auth');
+        $this->publishes([
+            __dir__ . "/../assets" => public_path('storage/themes')
+        ], 'multi_auth_themes');
     }
 }
