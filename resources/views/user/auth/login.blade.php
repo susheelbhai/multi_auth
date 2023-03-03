@@ -2,46 +2,30 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
 
-        <!-- login Address -->
-        <div>
-            <x-input-label for="login" :value="__('login')" />
-            <x-text-input id="login" class="block mt-1 w-full" type="login" name="login" :value="old('login')" required autofocus />
+    <div class="register-form my-4 my-lg-5">
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+          <div class="form-group mb-3">
+            <input name="login" class="form-control rounded-0" type="login" placeholder="Email Address" required>
             <x-input-error :messages="$errors->get('login')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
+          </div>
+          <div class="form-group mb-3">
+            <label class="label-psswd" for="registerPassword">Show</label>
+            <input name="password" class="form-control rounded-0" id="registerPassword" type="password" placeholder="Password" required>
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
+          </div>
+          <button class="btn btn-primary w-100" type="submit"><i class="bi bi-unlock me-2"></i>Login</button>
+        </form>
+        <div class="login-meta-data d-flex align-items-center justify-content-between">
+          <div class="form-check mt-3">
+            <input name="remember" class="form-check-input" id="rememberMe" type="checkbox" value="" checked>
+            <label class="form-check-label" for="rememberMe">Keep me logged in</label>
+          </div>
+          @if (Route::has('password.request'))
+          <a class="forgot-password mt-3" href="{{ route('password.request') }}">Forgot Password?</a>
+          @endif
         </div>
+      </div>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ml-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
 </x-user.guest-layout>

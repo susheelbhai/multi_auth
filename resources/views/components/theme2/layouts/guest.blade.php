@@ -141,26 +141,9 @@
                 <!-- Register Form -->
                 {{ $slot }}
 
-                <div class="register-form my-4 my-lg-5">
-                  <form action="#" method="post">
-                    <div class="form-group mb-3">
-                      <input class="form-control rounded-0" type="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group mb-3">
-                      <label class="label-psswd" for="registerPassword">Show</label>
-                      <input class="form-control rounded-0" id="registerPassword" type="password" placeholder="Password" required>
-                    </div>
-                    <button class="btn btn-primary w-100" type="submit"><i class="bi bi-unlock me-2"></i>Login</button>
-                  </form>
-                  <div class="login-meta-data d-flex align-items-center justify-content-between">
-                    <div class="form-check mt-3">
-                      <input class="form-check-input" id="rememberMe" type="checkbox" value="" checked>
-                      <label class="form-check-label" for="rememberMe">Keep me logged in</label>
-                    </div><a class="forgot-password mt-3" href="forget-password.html">Forgot Password?</a>
-                  </div>
-                </div>
+                
                 <!-- Sign in via others -->
-                <div class="signin-via-others">
+                <div class="signin-via-others d-none">
                   <p class="mb-0">Or Sign in with</p><a class="btn btn-primary btn-sm mt-3 me-3" href="#"><i class="bi bi-facebook me-2"></i>Facebook</a><a class="btn btn-primary btn-sm mt-3 me-3" href="#"><i class="bi bi-twitter me-2"></i>Twitter</a>
                 </div>
               </div>
