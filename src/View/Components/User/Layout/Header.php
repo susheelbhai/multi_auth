@@ -27,16 +27,10 @@ class Header extends Component
      */
     public function render()
     {
-            $header = 'header2';
+            $header = 'header';
             if (url()->current() == route('home')) {
                 $header = 'header';
             }
-            if (url()->current() == route('listing')) {
-                $header = 'header';
-            }
-            if (url()->current() == route('privacy')) {
-                $header = 'header';
-            }
-        return view('components.'.$this->settings->user_theme.'.layout.'.$header);
+        return view('components.'.$this->settings->user_theme.'.layouts.'.$header);
     }
 }

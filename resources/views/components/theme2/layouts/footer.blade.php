@@ -1,144 +1,87 @@
 @php
     $settings = Config::get('settings');
 @endphp
-<!-- START FOOTER -->
-<footer class="first-footer">
-    <div class="top-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="netabout">
-                        <a href="{{ route('home') }}" class="logo">
-                            <img src="{{ asset('storage/common/images/logo/' . $settings->light_logo) }}" alt="netcom">
-                        </a>
-                        <p> {{ $settings->short_description }}</p>
-                    </div>
-                    <div class="contactus">
-                        <ul>
-                            <li>
-                                <div class="info">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <p class="in-p">{{ $settings->address }}</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <p class="in-p">{{ $settings->phone }}</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <p class="in-p ti">{{ $settings->email }}</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="widget quick-link clearfix">
-                        <h3 class="widget-title">Free listing to all over cities</h3>
-                        <div class="quick-links">
-                            <ul class="one-half mr-5">
-                                <li><a href="{{ route('home') }}">Ahmedabad</a></li>
-                                <li><a href="{{ route('home') }}">Bangalore</a></li>
-                                <li><a href="{{ route('home') }}">Chandigarh</a></li>
-                                <li><a href="{{ route('home') }}">Chennai</a></li>
-                                <li><a href="{{ route('home') }}">Coimbatore</a></li>
-                                <li><a href="{{ route('home') }}">Delhi-NCR</a></li>
-                            </ul>
-                            <ul class="one-half">
-                                <li><a href="#">Hyderabad</a></li>
-                                <li><a href="{{ route('contact') }}">Goa</a></li>
-                                <li><a href="{{ route('privacy') }}">Indore</a></li>
-                                <li><a href="{{ route('tnc') }}">Jaipur</a></li>
-                                <li><a href="{{ route('tnc') }}">Kolkata</a></li>
-                                <li><a href="{{ route('tnc') }}">Mumbai</a></li>
-                                <li><a href="{{ route('tnc') }}">Mysore</a></li>
-                                <li><a href="{{ route('tnc') }}">Nagpur </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="widget">
-                        <h3>Instagram</h3>
-                        <ul class="photo">
-                            <li class="hover-effect">
-                                <figure>
-                                    <a href="#"><img src="storage/theme/theme2/images/instagram/inst-1.jpg" alt=""></a>
-                                </figure>
-                            </li>
-                            <li class="hover-effect">
-                                <figure>
-                                    <a href="#"><img src="storage/theme/theme2/images/instagram/inst-2.jpg" alt=""></a>
-                                </figure>
-                            </li>
-                            <li class="hover-effect">
-                                <figure>
-                                    <a href="#"><img src="storage/theme/theme2/images/instagram/inst-3.jpg" alt=""></a>
-                                </figure>
-                            </li>
-                            <li class="hover-effect">
-                                <figure>
-                                    <a href="#"><img src="storage/theme/theme2/images/instagram/inst-4.jpg" alt=""></a>
-                                </figure>
-                            </li>
-                            <li class="hover-effect">
-                                <figure>
-                                    <a href="#"><img src="storage/theme/theme2/images/instagram/inst-5.jpg" alt=""></a>
-                                </figure>
-                            </li>
-                            <li class="hover-effect">
-                                <figure>
-                                    <a href="#"><img src="storage/theme/theme2/images/instagram/inst-6.jpg" alt=""></a>
-                                </figure>
-                            </li>
-                            <li class="hover-effect mb-0">
-                                <figure>
-                                    <a href="#"><img src="storage/theme/theme2/images/instagram/inst-7.jpg" alt=""></a>
-                                </figure>
-                            </li>
-                            <li class="hover-effect mb-0">
-                                <figure>
-                                    <a href="#"><img src="storage/theme/theme2/images/instagram/inst-8.jpg" alt=""></a>
-                                </figure>
-                            </li>
-                            <li class="hover-effect mb-0">
-                                <figure>
-                                    <a href="#"><img src="storage/theme/theme2/images/instagram/inst-9.jpg" alt=""></a>
-                                </figure>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="newsletters">
-                        <h3>Newsletters</h3>
-                        <p>Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</p>
-                    </div>
-                    <form class="bloq-email mailchimp form-inline" method="post">
-                        <label for="subscribeEmail" class="error"></label>
-                        <div class="email">
-                            <input type="email" id="subscribeEmail" name="EMAIL" placeholder="Enter Your Email">
-                            <input type="submit" value="Subscribe">
-                            <p class="subscription-success"></p>
-                        </div>
-                    </form>
-                </div>
+<footer class="footer-area footer-2 pt-120 pb-120">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Footer Widget Area -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="footer-widget-area"><a class="d-block mb-4" href="{{ asset('storage/themes/theme2') }}/index.html"><img src="{{ asset('storage/themes/theme2') }}/img/core-img/logo-white.png" alt=""></a>
+            <p>It's crafted with the latest trend of design &amp; coded with all modern approaches.</p>
+            <!-- Newsletter Form -->
+            <div class="newsletter-form mb-4">
+              <form class="d-flex align-items-stretch" action="#">
+                <input class="form-control rounded-0 rounded-start" type="email" placeholder="Enter email">
+                <button class="btn btn-warning rounded-0 rounded-end px-3" type="submit"><i class="bi bi-arrow-right"></i></button>
+              </form>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="second-footer">
-        <div class="container">
-            <p>{{ $settings->app_name }} ©2021 All rights reserved. </p>
-            <ul class="netsocials">
-                <li><a href="{{ $settings->facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="{{ $settings->twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="{{ $settings->instagram }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href="{{ $settings->linkedin }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <!-- Footer Widget Area-->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="footer-widget-area">
+            <h5 class="mb-4 text-white">Our Products</h5>
+            <ul class="list-unstyled">
+              <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"><i class="bi bi-caret-right"></i>Suha Mobile</a></li>
+              <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"><i class="bi bi-caret-right"></i>Affan Mobile</a></li>
+              <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"><i class="bi bi-caret-right"></i>Newsten Blog</a></li>
+              <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"><i class="bi bi-caret-right"></i>Classy Multipurpose</a></li>
+              <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"><i class="bi bi-caret-right"></i>Educamp Education</a></li>
             </ul>
+          </div>
         </div>
+        <!-- Footer Widget Area-->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="footer-widget-area">
+            <h5 class="mb-4 text-white">Important Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"><i class="bi bi-caret-right"></i>Community &amp; Forum</a></li>
+              <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"><i class="bi bi-caret-right"></i>About Licences</a></li>
+              <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"><i class="bi bi-caret-right"></i>Careers</a></li>
+              <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"><i class="bi bi-caret-right"></i>Terms &amp; Conditions</a></li>
+              <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"><i class="bi bi-caret-right"></i>Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Footer Widget Area -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="footer-widget-area">
+            <h5 class="mb-4 text-white">Our Location</h5>
+            <p class="lh-base mb-3">Designing World Inc. <br> 1604 NSD, Dhaka, BD</p>
+            <p class="mb-0">Call: +123 456 789 <br> Email: help@example.com</p>
+            <!-- Footer Social Icon -->
+            <div class="footer-social-icon d-flex align-items-center mt-3"><a href="{{ asset('storage/themes/theme2') }}/#" data-bs-toggle="tooltip" data-bs-placement="top" title="Facbook"><i class="bi bi-facebook"></i></a><a href="{{ asset('storage/themes/theme2') }}/#" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"><i class="bi bi-twitter"></i></a><a href="{{ asset('storage/themes/theme2') }}/#" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram"><i class="bi bi-instagram"></i></a><a href="{{ asset('storage/themes/theme2') }}/#" data-bs-toggle="tooltip" data-bs-placement="top" title="Linkedin"><i class="bi bi-linkedin"></i></a><a href="{{ asset('storage/themes/theme2') }}/#" data-bs-toggle="tooltip" data-bs-placement="top" title="Youtube"><i class="bi bi-youtube"></i></a></div>
+          </div>
+        </div>
+      </div>
     </div>
-</footer>
+    <div class="container">
+      <div class="copywrite-wrapper mt-5 rounded d-lg-flex align-items-lg-center justify-content-lg-between">
+        <!-- Copywrite Text -->
+        <div class="copywrite-text text-center text-lg-start mb-3 mb-lg-0 me-lg-4">
+          <p class="mb-0">2021 &copy; All rights reserved by <a href="{{ asset('storage/themes/theme2') }}/#" target="_blank">Designing World</a></p>
+        </div>
+        <!-- Footer Nav -->
+        <div class="footer-nav mb-3 mb-lg-0 me-lg-4">
+          <ul class="mb-0 d-flex flex-wrap justify-content-center list-unstyled">
+            <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank">Privacy Policy</a></li>
+            <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank">Terms &amp; Conditions</a></li>
+            <li><a href="{{ asset('storage/themes/theme2') }}/#" target="_blank">Get Support</a></li>
+          </ul>
+        </div>
+        <!-- Dropup -->
+        <div class="language-dropdown text-center text-lg-end">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Language</button>
+          <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="{{ asset('storage/themes/theme2') }}/#"><span class="me-2 flag-icon flag-icon-sa"></span>Arabic</a><a class="dropdown-item" href="{{ asset('storage/themes/theme2') }}/#"><span class="me-2 flag-icon flag-icon-bd"></span>Bengali</a><a class="dropdown-item" href="{{ asset('storage/themes/theme2') }}/#"><span class="me-2 flag-icon flag-icon-us"></span>English</a><a class="dropdown-item" href="{{ asset('storage/themes/theme2') }}/#"><span class="me-2 flag-icon flag-icon-my"></span>Malay</a><a class="dropdown-item" href="{{ asset('storage/themes/theme2') }}/#"><span class="me-2 flag-icon flag-icon-es"></span>Spanish</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top -->
+  <div id="scrollTopButton"><i class="bi bi-arrow-up-short"></i></div>
+  <!-- Cookie Alert Area-->
+  <div class="cookiealert">
+    <p>This site uses cookies. We use cookies to ensure you get the best experience on our website. For details, please check our <a href="{{ asset('storage/themes/theme2') }}/#" target="_blank"> Privacy Policy.</a></p>
+    <button class="btn btn-primary btn-sm acceptcookies" type="button" aria-label="Close">I agree &amp; Close</button>
+  </div>

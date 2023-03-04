@@ -18,9 +18,7 @@ use App\Http\Controllers\User\HomeController;
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-Route::get('/', [HomeController::class, 'listing'])->name('home');
-Route::get('/getSubCategory', [HomeController::class, 'getSubCategory'])->name('getSubCategory');
-Route::get('/listings', [HomeController::class, 'listing'])->name('listing');
+Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/listingDetail/{id}', [HomeController::class, 'listingDetail'])->name('listingDetail');
 Route::post('/submit_review/{id}', [HomeController::class, 'submit_review'])->name('submit_review');
 Route::get('/about', [HomeController::class, 'about'])->name('about');

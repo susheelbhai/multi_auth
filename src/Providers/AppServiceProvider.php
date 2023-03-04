@@ -30,7 +30,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFive();
         $settings = Setting::where('id', 1)->first();
-
         Config::set('settings', $settings);
     }
 }

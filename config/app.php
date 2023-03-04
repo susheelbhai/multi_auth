@@ -186,6 +186,7 @@ return [
          * Package Service Providers...
          */
         Susheelbhai\MultiAuth\MultiAuthServiceProvider::class,
+        Susheelbhai\MultiAuth\BladeServiceProvider::class,
         /*
          * Application Service Providers...
          */
