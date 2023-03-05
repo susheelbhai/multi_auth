@@ -12,7 +12,7 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
         <link rel="stylesheet" href="{{ url('storage/css/common.css') }}">
-        @include('components.'.$settings->admin_theme.'.head_tag')
+            @relativeInclude('head_tag')
         @if (isset($head_tag))
             {{ $head_tag }}
         @endif
@@ -52,7 +52,7 @@
 
         <!-- JAVASCRIPT -->
         
-        @include('components.'.$settings->admin_theme.'.js')
+            @relativeInclude('js')
     <script src="{{ url('storage/js/common.js') }}">  </script>
     </body>
 </html>
