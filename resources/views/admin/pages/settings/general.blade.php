@@ -1,5 +1,5 @@
 
-<x-admin-layout>
+<x-admin.app-layout>
     
   <x-slot name="head_tag">
       <title> General Settings </title>
@@ -30,17 +30,17 @@
                          <x-admin.form.input1 type="text" name="app_name" lbl="App Name" value="{{$settings->app_name}}" />
                       </div>
                       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 pt-2">
-                        <x-admin.form.input-img1 name="favicon" lbl=" Change Favicon" :value="asset('storage/common/images/logo/' . $settings->favicon)" />
+                        <x-admin.form.input-img1 name="favicon" lbl=" Change Favicon" :value="asset('storage/images/webpages/logo/' . $settings->favicon)" />
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="row pt-4">
                       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 pt-2">
-                        <x-admin.form.input-img1 name="dark_logo" lbl=" Change dark Logo" :value="asset('storage/common/images/logo/' . $settings->dark_logo)" />
+                        <x-admin.form.input-img1 name="dark_logo" lbl=" Change dark Logo" :value="asset('storage/images/webpages/logo/' . $settings->dark_logo)" />
                       </div>
                       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 pt-2">
-                        <x-admin.form.input-img1 name="light_logo" lbl=" Change Light Logo" :value="asset('storage/common/images/logo/' . $settings->light_logo)" />
+                        <x-admin.form.input-img1 name="light_logo" lbl=" Change Light Logo" :value="asset('storage/images/webpages/logo/' . $settings->light_logo)" />
                       </div>
                     </div>
                   </div>
@@ -71,4 +71,4 @@
       </div>
     </div>
   </div>
-</x-admin-layout>
+</x-admin.app-layout>

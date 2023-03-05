@@ -1,4 +1,4 @@
-<x-user-layout>
+<x-user.app-layout>
 
     <x-slot name="head">
         <meta name="description" content="html 5 template">
@@ -103,6 +103,6 @@
 
         <script src="http://localhost/slist/storage/theme/theme2/js/inner.js"></script>
     </x-slot>
-</x-user-layout>
+</x-user.app-layout>
 
 

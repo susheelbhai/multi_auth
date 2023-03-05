@@ -1,4 +1,4 @@
-<x-user-layout>
+<x-user.app-layout>
 
     <div class="clearfix"></div>
         <!-- Header Container / End -->

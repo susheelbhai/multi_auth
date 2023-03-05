@@ -21,7 +21,7 @@ class Profile extends Component
     {
         $this->settings = Config::get('settings');
         $this->user = Auth::guard('admin')->user();
-        $this->src = url('storage/admin/images/profile/').'/'.$this->user->profile_pic;
+        $this->src = url('storage/images/admin/profile/').'/'.$this->user->profile_pic;
     }
 
     /**

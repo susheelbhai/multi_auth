@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-admin.app-layout>
 
     @php
         $details = [
@@ -57,4 +57,4 @@
         </x-slot>
     </x-admin.detail-page.page1>
 
-</x-admin-layout>
+</x-admin.app-layout>

@@ -1,7 +1,7 @@
 
 
 
-<x-admin-layout>
+<x-admin.app-layout>
     
     <x-slot name="head">
         <title> Advanced Settings | {{ $settings->app_name }}</title>
@@ -90,4 +90,4 @@
             <!-- /.card -->
       
     </div>
-</x-admin-layout>
+</x-admin.app-layout>

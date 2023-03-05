@@ -22,6 +22,6 @@ class AppLayout extends Component
 
     public function render(): View
     {
-        return view('admin.layouts.'.$this->settings->admin_theme.'.app');
+        return view('components.'.$this->settings->admin_theme.'.layouts.app');
     }
 }

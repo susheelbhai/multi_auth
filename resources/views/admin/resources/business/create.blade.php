@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-admin.app-layout>
 
     @php
         $details = [
@@ -55,4 +55,4 @@
         
     </x-admin.form.form_wizard1>
 
-</x-admin-layout>
+</x-admin.app-layout>

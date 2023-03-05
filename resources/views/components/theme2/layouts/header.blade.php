@@ -30,7 +30,17 @@
             
           </ul>
           <!-- Login Button -->
-          <div class="ms-auto mb-3 mb-lg-0"><a class="btn btn-warning btn-sm" href="{{ route('login') }}">Log In</a></div>
+          <div class="ms-auto mb-3 mb-lg-0">
+          @auth('user')
+          <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button class="btn btn-warning btn-sm">Log Out</button>
+                    </form>
+          
+          @else
+          <a class="btn btn-warning btn-sm" href="{{ route('login') }}">Log In</a>
+          @endauth
+          </div>
         </div>
       </div>
     </nav>

@@ -20,8 +20,8 @@ class HomeController extends Controller
     }
     public function about()
     {
-        $important_links = ImportantLink::all();
-        return view('user.pages.about.index', compact('important_links'));
+        // $important_links = ImportantLink::all();
+        return view('user.pages.about.index');
         
     }
     public function privacy()

@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-admin.app-layout>
 
 
-</x-admin-layout>
+</x-admin.app-layout>

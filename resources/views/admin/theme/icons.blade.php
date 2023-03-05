@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-admin.app-layout>
     
     <div class="container-fluid">
         <x-admin.dashboard.heading1 heading="Icons" />
@@ -51,4 +51,4 @@
         </div> <!-- end row -->
     </div>
     <script src="{{url('storage/theme/admin/theme1/assets/js/pages/fontawesome.init.js')}}"></script>
-</x-admin-layout>
+</x-admin.app-layout>

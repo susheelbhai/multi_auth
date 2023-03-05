@@ -16,7 +16,7 @@ use App\Http\Controllers\User\HomeController;
 */
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+        return view('user.pages.home.index');
 })->name('dashboard');
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/listingDetail/{id}', [HomeController::class, 'listingDetail'])->name('listingDetail');

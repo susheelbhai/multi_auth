@@ -18,7 +18,7 @@ class GuestUser
     public function handle(Request $request, Closure $next)
     {
         if (Auth::guard('user')->check()) {
-            return redirect()->route('user.home')->with('message', 'Please login first');
+            return redirect()->route('home')->with('message', 'Please login first');
         }
         return $next($request);
     }

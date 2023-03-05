@@ -31,9 +31,12 @@ class MultiAuthServiceProvider extends ServiceProvider
             __dir__ . "/../config" => config_path('/'),
             __dir__ . "/../routes" => base_path('/routes'),
             __DIR__.'/../resources/views' => base_path('resources/views'),
+            __dir__ . "/../assets/images" => public_path('storage/images'),
+            __dir__ . "/../assets/css" => public_path('storage/css'),
+            __dir__ . "/../assets/js" => public_path('storage/js')
         ], 'multi_auth');
         $this->publishes([
-            __dir__ . "/../assets" => public_path('storage/themes')
+            __dir__ . "/../assets" => public_path('storage')
         ], 'multi_auth_themes');
     }
 }

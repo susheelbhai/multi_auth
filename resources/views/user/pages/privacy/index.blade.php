@@ -1,4 +1,4 @@
-<x-user-layout>
+<x-user.app-layout>
 
     <x-slot name="head">
         <meta name="description" content="html 5 template">

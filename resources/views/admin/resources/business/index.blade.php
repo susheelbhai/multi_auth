@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-admin.app-layout>
 
 
     <x-admin.table.table1 heading="All Business" :addUrl="route('admin.business.create')"  >
@@ -33,4 +33,4 @@
         </x-slot>
     </x-admin.table.table1>
 
-</x-admin-layout>
+</x-admin.app-layout>
