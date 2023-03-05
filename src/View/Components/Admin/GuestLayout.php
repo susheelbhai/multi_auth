@@ -18,6 +18,6 @@ class GuestLayout extends Component
 
     public function render(): View
     {
-        return view('components.'.$this->settings->admin_theme.'.guest');
+        return view('components.'.$this->settings->admin_theme.'.layouts.guest');
     }
 }
