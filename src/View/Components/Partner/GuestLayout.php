@@ -17,6 +17,6 @@ class GuestLayout extends Component
 
     public function render(): View
     {
-        return view('components.'.$this->settings->partner_theme.'.guest');
+        return view('components.'.$this->settings->partner_theme.'.layouts.guest');
     }
 }

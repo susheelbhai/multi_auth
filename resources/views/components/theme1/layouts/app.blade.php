@@ -3,10 +3,14 @@
 
 <head>
   <link rel="stylesheet" href="{{ url('storage/css/common.css') }}">
-            @relativeInclude('head_tag')
-    @if (isset($head_tag))
-        {{ $head_tag }}
-    @endif
+  @if (isset($common_head_tag))
+      {{ $common_head_tag }}
+  @endif
+  @relativeInclude('head_tag')
+  @if (isset($head_tag))
+    {{ $head_tag }}
+  @endif
+
 
     
 </head>

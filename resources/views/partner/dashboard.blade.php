@@ -1,4 +1,4 @@
-<x-partner-layout>
+<x-partner.app-layout>
 
     <div class="container-fluid">
         <x-partner.dashboard.heading1 heading="Dashboard" />
@@ -52,4 +52,4 @@
         
     </div>
 
-</x-partner-layout>
+</x-partner.app-layout>

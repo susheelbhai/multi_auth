@@ -23,27 +23,7 @@
         <div class="bg-overlay"></div>
         <div class="wrapper-page">
             <div class="container-fluid p-0">
-                <div class="card">
-                    <div class="card-body">
-
-                        <div class="text-center mt-4">
-                            <div class="mb-3">
-                                <a href="index.html" class="auth-logo">
-                                    <img src="assets/images/logo-dark.png" height="30" class="logo-dark mx-auto" alt="">
-                                    <img src="assets/images/logo-light.png" height="30" class="logo-light mx-auto" alt="">
-                                </a>
-                            </div>
-                        </div>
-    
-                        <h4 class="text-muted text-center font-size-18"><b>Sign In</b></h4>
-    
-                        <div class="p-3">
-                            {{$slot}}
-                        </div>
-                        <!-- end -->
-                    </div>
-                    <!-- end cardbody -->
-                </div>
+                {{$slot}}
                 <!-- end card -->
             </div>
             <!-- end container -->

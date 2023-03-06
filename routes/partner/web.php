@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Partner\BusinessController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Partner\ProfileController;
 use App\Http\Controllers\Partner\HomeController;
 use App\Http\Controllers\Partner\ProductController;
 
