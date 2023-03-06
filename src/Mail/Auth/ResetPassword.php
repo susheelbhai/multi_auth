@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class PartnerResetPassword extends Mailable
+class ResetPassword extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -21,10 +21,10 @@ class PartnerResetPassword extends Mailable
 
     public $data;
     public $token_url;
-    public function __construct($data, $token)
+    public function __construct($data, $token_url)
     {
        $this->data = $data;
-       $this->token_url = route('partner.password.reset',$token).'?email='.$data->email;
+       $this->token_url = $token_url;
     }
 
     /**
@@ -35,7 +35,7 @@ class PartnerResetPassword extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Partner Reset Password',
+            subject: 'Password Reset Link',
         );
     }
 
@@ -47,7 +47,7 @@ class PartnerResetPassword extends Mailable
     public function content()
     {
         return new Content(
-            markdown: 'mail.auth.partner-reset-password',
+            markdown: 'mail.auth.reset-password',
         );
     }
 

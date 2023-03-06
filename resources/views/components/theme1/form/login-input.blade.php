@@ -1,7 +1,7 @@
 @if ($type == 'text' || $type == 'email' || $type == 'number' || $type == 'password')
 <div class="form-group mb-3 row">
     <div class="col-12">
-        <input name="{{$name}}" class="form-control" type="{{$type}}" required="" placeholder="{{ $lbl }}">
+        <input name="{{$name}}" class="form-control" type="{{$type}}" required="" placeholder="{{ $lbl }}" value="{{ $value ?? old($name) }}">
     <x-input-error :messages="$errors->get($name)" class="mt-2" />
     </div>
 </div>

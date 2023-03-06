@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
-use App\Http\Requests\Admin\ProfileUpdateRequest;
+use App\Http\Requests\Auth\AdminProfileUpdateRequest;
 
 class ProfileController extends Controller
 {
@@ -27,7 +27,7 @@ class ProfileController extends Controller
     /**
      * Update the user's profile information.
      */
-    public function update(ProfileUpdateRequest $request): RedirectResponse
+    public function update(AdminProfileUpdateRequest $request): RedirectResponse
     {
         $request->user('admin')->fill($request->validated());
         
